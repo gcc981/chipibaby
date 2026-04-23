@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chipi Baby | Desde Canarias para tus bebés 🍼</title>
+    <!-- Librerías de diseño y animaciones -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+        
+        :root {
+            --chipi-primary: #00f2ea; 
+            --chipi-medium: #00d7d0;
+            --chipi-dark: #008b8b;
+            --chipi-soft: #e0ffff;
+            --chipi-bg: #f0fdfd; 
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--chipi-bg);
+            overflow-x: hidden;
+            color: #1a3a3a;
+            scroll-behavior: smooth;
+        }
+
+        .emoji-bg {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.2;
+            z-index: 0;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .bg-chipi { background-color: var(--chipi-medium); }
+        .text-chipi { color: var(--chipi-dark); }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border: 2px solid rgba(0, 242, 234, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--chipi-primary);
+            box-shadow: 0 25px 50px -12px rgba(0, 139, 139, 0.25);
+        }
+
+        .faq-item {
+            border-radius: 20px;
+            background: white;
+            border: 2px solid #e2fcfb;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item.active .faq-content {
+            max-height: 250px;
+            padding: 20px;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background: #f7ffff;
+            padding: 0 20px;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .heart-beat { animation: heartbeat 2s infinite; }
+
+        .btn-fancy {
+            background: linear-gradient(135deg, var(--chipi-primary) 0%, var(--chipi-dark) 100%);
+            transition: all 0.3s ease;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        .btn-fancy:hover {
+            filter: brightness(1.1);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(0, 215, 208, 0.4);
+        }
+
+        .blob-img {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            border: 6px solid white;
+            box-shadow: 0 20px 40px rgba(0, 139, 139, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Elementos decorativos flotantes -->
+    <div class="emoji-bg" style="top: 10%; left: 5%;">🍼</div>
+    <div class="emoji-bg" style="top: 15%; right: 10%;">☁️</div>
+    <div class="emoji-bg" style="top: 40%; left: 8%;">🧸</div>
+    <div class="emoji-bg" style="top: 60%; right: 5%;">🐥</div>
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-white/90 backdrop-blur-xl sticky top-0 z-50 border-b-2 border-cyan-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-4xl animate__animated animate__pulse animate__infinite">👶</span>
+                <span class="text-2xl font-bold tracking-tighter text-teal-900">Chipi <span class="text-chipi">Baby</span></span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 font-bold text-teal-800/70 text-sm">
+                <a href="#inicio" class="hover:text-teal-900 transition">Inicio</a>
+                <a href="#ventajas" class="hover:text-teal-900 transition">¿Por qué?</a>
+                <a href="#tienda" class="hover:text-teal-900 transition">Tienda</a>
+                <a href="#faq" class="hover:text-teal-900 transition">FAQ</a>
+            </div>
+
+            <button class="relative p-3 bg-cyan-50 rounded-2xl text-cyan-600 hover:bg-cyan-100 transition-all">
+                <i class="fas fa-shopping-bag text-xl"></i>
+                <span class="absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] w-6 h-6 flex items-center justify-center rounded-full font-bold border-2 border-white">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Sección Principal (Hero) -->
+    <section id="inicio" class="relative pt-16 pb-32 overflow-hidden bg-gradient-to-b from-cyan-50 to-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-16 md:mb-0" data-aos="fade-right">
+                <div class="flex items-center space-x-2 bg-cyan-100 w-max px-5 py-2 rounded-full mb-8 text-[11px] font-black text-cyan-800 uppercase tracking-widest border border-cyan-200">
+                    <span class="heart-beat">🏝️</span> Desde Canarias para tus bebés
+                </div>
+                <h1 class="text-6xl md:text-8xl font-black text-teal-950 mb-6 leading-[0.9]">
+                    Baberos <br> <span class="text-chipi italic underline decoration-wavy decoration-cyan-300">Vibrantes</span> ✨
+                </h1>
+                <p class="text-xl text-teal-900/80 mb-10 max-w-md leading-relaxed font-medium">
+                    Suavidad premium con colores que resaltan la alegría de tu bebé. Diseñados con amor en las islas. 🐥
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#tienda" class="btn-fancy px-12 py-6 rounded-3xl font-black text-lg text-center shadow-xl">¡QUIERO EL MÍO! 🛒</a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 relative" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1522771935877-53787dcd3ee6?auto=format&fit=crop&q=80&w=800" alt="Bebé feliz con babero" class="blob-img max-w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Características -->
+    <section id="ventajas" class="py-24 bg-white relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-12 rounded-[50px] bg-cyan-50/50 border-2 border-cyan-100 text-center hover:scale-105 transition-all shadow-xl shadow-cyan-900/5" data-aos="fade-up">
+                    <div class="w-20 h-20 bg-white rounded-3xl flex items-center justify-center text-5xl mx-auto mb-8 shadow-inner">☁️</div>
+                    <h3 class="text-2xl font-black text-teal-950 mb-4">Pura Suavidad</h3>
+                    <p class="text-teal-900/70 font-medium">Doble capa de algodón premium. Tan suave como un abrazo de mamá.</p>
+                </div>
+                <div class="p-12 rounded-[50px] bg-cyan-50/50 border-2 border-cyan-100 text-center hover:scale-105 transition-all shadow-xl shadow-cyan-900/5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-white rounded-3xl flex items-center justify-center text-5xl mx-auto mb-8 shadow-inner">💧</div>
+                    <h3 class="text-2xl font-black text-teal-950 mb-4">Súper Seco</h3>
+                    <p class="text-teal-900/70 font-medium">Absorción inmediata para que su pechito esté siempre seco y protegido.</p>
+                </div>
+                <div class="p-12 rounded-[50px] bg-cyan-50/50 border-2 border-cyan-100 text-center hover:scale-105 transition-all shadow-xl shadow-cyan-900/5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-white rounded-3xl flex items-center justify-center text-5xl mx-auto mb-8 shadow-inner">🎨</div>
+                    <h3 class="text-2xl font-black text-teal-950 mb-4">Estilo Bandana</h3>
+                    <p class="text-teal-900/70 font-medium">El complemento perfecto para cualquier outfit, ¡será la envidia del parque!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section id="tienda" class="py-24 relative bg-cyan-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="text-chipi font-black uppercase tracking-[0.3em] text-sm">Colección Exclusiva</span>
+                <h2 class="text-5xl font-black text-teal-950 mt-4 mb-4">Packs Estrellas ⭐</h2>
+                <div class="w-24 h-2 bg-chipi mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12" id="product-grid"></div>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black text-teal-950 mb-6">Dudas Frecuentes 🧐</h2>
+                <p class="text-lg text-teal-900/60 font-medium">Todo lo que necesitas saber sobre Chipi Baby</p>
+            </div>
+            <div class="space-y-6">
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="w-full p-6 flex justify-between items-center font-bold text-teal-900" onclick="toggleFAQ(this)">
+                        <span class="text-lg">¿Para qué edades son recomendados? 👶</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p class="py-4 text-teal-800">Nuestros baberos tienen botones ajustables, ideales desde los **3 meses hasta los 3 años**.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="w-full p-6 flex justify-between items-center font-bold text-teal-900" onclick="toggleFAQ(this)">
+                        <span class="text-lg">¿Hacen envíos fuera de Canarias? 📦</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p class="py-4 text-teal-800">Por ahora nos centramos en dar el mejor servicio a nuestras **Islas Canarias**.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-cyan-950 text-white pt-20 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-white/10 pb-12 mb-12">
+                <div class="text-center md:text-left">
+                    <span class="text-3xl font-black">Chipi Baby</span>
+                    <p class="text-cyan-400 text-xs font-bold mt-2 uppercase tracking-widest">Desde Canarias para tus bebés</p>
+                </div>
+                <div class="text-center">
+                    <div class="flex flex-col items-center space-y-2 text-xs font-black uppercase tracking-widest text-cyan-500">
+                        <span class="whitespace-nowrap">Horario: 9:00 - 15:00 (Canarias)</span>
+                        <a href="mailto:infochipibaby@gmail.com" class="hover:text-cyan-400 lowercase transition">contacto: infochipibaby@gmail.com</a>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <div class="flex justify-center md:justify-end space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center hover:bg-cyan-400 transition-all shadow-lg">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="text-cyan-100/30 text-[10px] font-black uppercase tracking-[0.5em]">&copy; 2024 Chipi Baby Canarias. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de funcionalidad -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar animaciones al hacer scroll
+        AOS.init({ duration: 1000, once: true });
+
+        // Función para abrir/cerrar acordeón de dudas
+        function toggleFAQ(button) {
+            const item = button.parentElement;
+            item.classList.toggle('active');
+            const icon = button.querySelector('i');
+            icon.style.transform = item.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        // Listado de productos (Simulado)
+        const products = [
+            { name: 'Pack Jungle', icon: '🦁', color: 'bg-emerald-100', img: 'https://images.unsplash.com/photo-1522771935877-53787dcd3ee6?auto=format&fit=crop&q=80&w=400' },
+            { name: 'Pack Dreamy', icon: '🌙', color: 'bg-cyan-100', img: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=400' },
+            { name: 'Pack Sweet', icon: '🍭', color: 'bg-rose-100', img: 'https://images.unsplash.com/photo-1544126592-807daa2b565b?auto=format&fit=crop&q=80&w=400' },
+            { name: 'Pack Ocean', icon: '🐳', color: 'bg-blue-100', img: 'https://images.unsplash.com/photo-1522771935877-53787dcd3ee6?auto=format&fit=crop&q=80&w=400' }
+        ];
+
+        // Renderizar productos en la rejilla
+        const grid = document.getElementById('product-grid');
+        products.forEach(p => {
+            grid.innerHTML += `
+                <div class="glass-card p-8 rounded-[50px] flex flex-col group" data-aos="fade-up">
+                    <div class="h-56 ${p.color} rounded-[40px] mb-8 overflow-hidden relative border-2 border-white">
+                        <img src="${p.img}" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                        <span class="absolute inset-0 flex items-center justify-center text-6xl group-hover:scale-125 transition-transform duration-500">${p.icon}</span>
+                    </div>
+                    <h4 class="font-black text-xl text-teal-950 mb-2">${p.name}</h4>
+                    <p class="text-xs text-cyan-600 font-bold mb-6 uppercase tracking-widest">4 Unidades • Algodón Orgánico</p>
+                    <div class="mt-auto flex justify-between items-center bg-white/50 p-4 rounded-3xl border border-white">
+                        <span class="text-2xl font-black text-cyan-600">12.99€</span>
+                        <button class="btn-fancy w-12 h-12 rounded-2xl flex items-center justify-center shadow-md hover:rotate-12 transition-all"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
