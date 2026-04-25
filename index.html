@@ -10,130 +10,129 @@
         body { font-family: 'Quicksand', sans-serif; background-color: #f8ffff; color: #1e293b; overflow-x: hidden; }
         .brand-font { font-family: 'Fredoka One', cursive; }
         
-        /* --- ANIMACIONES INTEGRADAS (No fallan) --- */
+        /* --- Animaciones CSS (Sin librerías externas para evitar fallos) --- */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
         @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.8); }
+            from { opacity: 0; transform: scale(0.9); }
             to { opacity: 1; transform: scale(1); }
         }
         @keyframes heartbeat {
             0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.08); }
             100% { transform: scale(1); }
         }
         
-        .anim-fade { animation: fadeInUp 0.8s ease forwards; }
-        .anim-zoom { animation: zoomIn 0.6s ease forwards; }
+        .anim-zoom { animation: zoomIn 0.7s ease-out forwards; }
+        .anim-fade { animation: fadeInUp 0.7s ease-out forwards; opacity: 0; }
         .heartbeat { animation: heartbeat 2s infinite ease-in-out; }
 
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+
         .product-img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 1.25rem; }
-        .card { 
-            background: white; border-radius: 1.5rem; padding: 1rem; border: 1px solid #e2e8f0; 
-            transition: all 0.3s ease; opacity: 0; /* Empieza invisible para la animación */
-        }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .card { background: white; border-radius: 1.5rem; padding: 1rem; border: 1px solid #e2e8f0; transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(13, 148, 136, 0.1); }
         
-        .icon-circle { 
-            width: 50px; height: 50px; background-color: #ccfbf1; border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center; 
-            margin: 0 auto 10px; font-size: 24px; 
-        }
+        .icon-circle { width: 50px; height: 50px; background-color: #ccfbf1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; transition: transform 0.3s; }
+        .icon-circle:hover { transform: rotate(15deg); }
+
         .btn-teal { background-color: #0d9488; color: white; border-bottom: 4px solid #086d64; transition: all 0.2s; }
         .btn-teal:active { transform: translateY(2px); border-bottom-width: 0; }
     </style>
 </head>
 <body>
 
-    <div class="bg-teal-600 text-white py-2 text-center text-[10px] font-bold uppercase tracking-widest">
+    <div class="bg-teal-600 text-white py-2 text-center text-[10px] md:text-xs font-bold uppercase tracking-widest anim-fade">
         🏝️ ENVÍO GRATIS A CANARIAS | PAGO BIZUM 💸
     </div>
 
-    <nav class="bg-white border-b p-4 sticky top-0 z-50">
+    <nav class="bg-white border-b sticky top-0 z-50 p-4">
         <div class="max-w-5xl mx-auto flex items-center gap-3">
-            <div class="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold">CB</div>
-            <h1 class="brand-font text-teal-600 text-xl">Chipi Baby</h1>
+            <img src="https://i.postimg.cc/YqHhz7F1/Diseno-sin-titulo-7.jpg" alt="Logo" class="w-10 h-10 rounded-full border border-teal-100">
+            <h1 class="brand-font text-teal-600 text-xl leading-none">Chipi Baby</h1>
         </div>
     </nav>
 
-    <header class="bg-white px-6 py-12 text-center">
-        <h2 class="text-4xl brand-font text-slate-900 mb-6 anim-zoom">Chipi Baby</h2>
+    <header class="bg-white px-6 py-10 text-center border-b border-teal-50">
+        <h2 class="text-4xl brand-font text-slate-900 mb-2 anim-zoom">Chipi Baby</h2>
         
-        <div class="max-w-[260px] mx-auto mb-8 anim-zoom" style="animation-delay: 0.2s;">
-            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=600&auto=format&fit=crop" 
-                 alt="Bebé con babero" 
-                 class="rounded-[3rem] w-full shadow-2xl border-4 border-white">
+        <div class="max-w-[220px] mx-auto mb-8 mt-6 anim-zoom delay-1">
+            <img src="https://i.postimg.cc/k4G6V7YQ/Chat-GPT-Image-12-mar-2026-11-29-52.png" 
+                 alt="Bebé Chipi Baby" 
+                 class="rounded-[2.5rem] w-full shadow-2xl border-4 border-white">
         </div>
         
-        <p class="text-slate-600 max-w-md mx-auto text-sm leading-relaxed anim-fade" style="animation-delay: 0.4s;">
+        <p class="text-slate-600 max-w-md mx-auto text-sm leading-relaxed px-4 anim-fade delay-2">
             Baberos de máxima absorción para tu bebé. <br>
-            <span class="font-bold text-teal-600 uppercase tracking-tighter">Algodón orgánico y diseños exclusivos de Lanzarote.</span>
+            <span class="font-bold text-teal-600">Algodón orgánico y diseños únicos de Lanzarote.</span>
         </p>
     </header>
 
-    <section class="py-10 bg-teal-50/50 grid grid-cols-2 md:grid-cols-4 gap-6 px-6 max-w-5xl mx-auto rounded-[2rem] anim-fade" style="animation-delay: 0.6s;">
-        <div class="text-center">
+    <section class="py-10 bg-white grid grid-cols-2 md:grid-cols-4 gap-6 px-6 max-w-5xl mx-auto text-center border-b border-teal-50 anim-fade delay-3">
+        <div>
             <div class="icon-circle">💧</div>
-            <h4 class="text-[11px] font-bold uppercase text-teal-800">Absorción Total</h4>
-            <p class="text-[9px] text-slate-500 px-2">Tres capas que mantienen su ropita seca todo el día.</p>
+            <h4 class="text-[11px] font-bold uppercase text-teal-700">Doble Capa</h4>
+            <p class="text-[10px] text-slate-500 mt-1 leading-tight font-medium">2 capas de protección para mantenerlo seco.</p>
         </div>
-        <div class="text-center">
+        <div>
             <div class="icon-circle">🌿</div>
-            <h4 class="text-[11px] font-bold uppercase text-teal-800">100% Orgánico</h4>
-            <p class="text-[9px] text-slate-500 px-2">Algodón suave certificado para pieles delicadas.</p>
+            <h4 class="text-[11px] font-bold uppercase text-teal-700">Algodón Orgánico</h4>
+            <p class="text-[10px] text-slate-500 mt-1 leading-tight font-medium">Suavidad natural para pieles delicadas.</p>
         </div>
-        <div class="text-center">
+        <div>
             <div class="icon-circle">🔄</div>
-            <h4 class="text-[11px] font-bold uppercase text-teal-800">Crece contigo</h4>
-            <p class="text-[9px] text-slate-500 px-2">Doble botón de ajuste para usar desde los 3 meses.</p>
+            <h4 class="text-[11px] font-bold uppercase text-teal-700">Ajuste Doble</h4>
+            <p class="text-[10px] text-slate-500 mt-1 leading-tight font-medium">Dos botones para crecer con tu bebé.</p>
         </div>
-        <div class="text-center">
+        <div>
             <div class="icon-circle">🏝️</div>
-            <h4 class="text-[11px] font-bold uppercase text-teal-800">Envío Local</h4>
-            <p class="text-[9px] text-slate-500 px-2">Desde Lanzarote a cualquier isla en 24/48h.</p>
+            <h4 class="text-[11px] font-bold uppercase text-teal-700">Envío Local</h4>
+            <p class="text-[10px] text-slate-500 mt-1 leading-tight font-medium">Gratis a todas las islas en 24/48h.</p>
         </div>
     </section>
 
-    <main class="max-w-5xl mx-auto p-6 grid grid-cols-2 gap-6 mt-4">
-        <div class="card anim-fade" style="animation-delay: 0.8s; opacity: 1;">
+    <main class="max-w-5xl mx-auto p-4 grid grid-cols-2 gap-4 mt-6">
+        <div class="card anim-fade delay-2">
             <img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-1080-x-1080-px-1080-x-1080-px.jpg" class="product-img">
-            <div class="mt-4 text-center">
-                <h3 class="text-xs font-bold uppercase">Set LAVA</h3>
-                <p class="text-teal-600 font-black text-lg mb-2">22,90€</p>
-                <a href="https://wa.me/34722862028" class="block w-full btn-teal py-3 rounded-xl text-[10px] font-bold">PAGAR POR BIZUM</a>
+            <div class="mt-3 flex flex-col justify-between text-center">
+                <h3 class="text-[13px] font-bold uppercase text-slate-700">Set LAVA</h3>
+                <p class="text-teal-600 font-black text-lg">22,90€</p>
+                <a href="https://wa.me/34722862028" class="mt-2 block w-full btn-teal py-3 rounded-xl text-[10px] font-bold uppercase">Pedir por Bizum</a>
             </div>
         </div>
-        <div class="card anim-fade" style="animation-delay: 1s; opacity: 1;">
+        <div class="card anim-fade delay-2">
             <img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px.jpg" class="product-img">
-            <div class="mt-4 text-center">
-                <h3 class="text-xs font-bold uppercase">Set MISTRAL</h3>
-                <p class="text-teal-600 font-black text-lg mb-2">22,90€</p>
-                <a href="https://wa.me/34722862028" class="block w-full btn-teal py-3 rounded-xl text-[10px] font-bold">PAGAR POR BIZUM</a>
+            <div class="mt-3 flex flex-col justify-between text-center">
+                <h3 class="text-[13px] font-bold uppercase text-slate-700">Set MISTRAL</h3>
+                <p class="text-teal-600 font-black text-lg">22,90€</p>
+                <a href="https://wa.me/34722862028" class="mt-2 block w-full btn-teal py-3 rounded-xl text-[10px] font-bold uppercase">Pedir por Bizum</a>
             </div>
         </div>
     </main>
 
-    <section class="py-16 px-6 max-w-5xl mx-auto">
-        <h3 class="brand-font text-center text-xl mb-10">Mamis Felices</h3>
+    <section class="py-16 px-6 max-w-5xl mx-auto anim-fade delay-3 text-center">
+        <h3 class="brand-font text-xl mb-10">Mamis Chipi Baby</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-3xl border border-teal-50 shadow-sm anim-fade" style="animation-delay: 1.2s; opacity: 1;">
-                <p class="text-sm italic text-slate-600">"El envío a Gran Canaria fue rapidísimo. El babero es súper grueso y no cala nada."</p>
-                <p class="mt-4 font-bold text-teal-600 text-xs">SARA J.</p>
+            <div class="bg-teal-50/50 p-6 rounded-3xl border border-teal-100 italic text-sm text-slate-600 shadow-sm">
+                "El envío a Lanzarote fue rapidísimo. Los baberos son preciosos."
+                <p class="mt-4 font-bold text-teal-700 not-italic text-xs">ELENA M.</p>
             </div>
-            <div class="bg-white p-6 rounded-3xl border border-teal-50 shadow-sm anim-fade" style="animation-delay: 1.4s; opacity: 1;">
-                <p class="text-sm italic text-slate-600">"Me encanta que sea algodón de verdad. Los diseños son preciosos."</p>
-                <p class="mt-4 font-bold text-teal-600 text-xs">ELENA R.</p>
+            <div class="bg-teal-50/50 p-6 rounded-3xl border border-teal-100 italic text-sm text-slate-600 shadow-sm">
+                "Doble capa ideal para que no pase la humedad. Súper suaves."
+                <p class="mt-4 font-bold text-teal-700 not-italic text-xs">SARA J.</p>
             </div>
-            <div class="bg-white p-6 rounded-3xl border border-teal-50 shadow-sm anim-fade" style="animation-delay: 1.6s; opacity: 1;">
-                <p class="text-sm italic text-slate-600">"Comprar por WhatsApp y pagar con Bizum es lo mejor, cero líos."</p>
-                <p class="mt-4 font-bold text-teal-600 text-xs">MARTA G.</p>
+            <div class="bg-teal-50/50 p-6 rounded-3xl border border-teal-100 italic text-sm text-slate-600 shadow-sm">
+                "Lo mejor es pagar con Bizum y olvidarte. Trato excelente."
+                <p class="mt-4 font-bold text-teal-700 not-italic text-xs">MARTA P.</p>
             </div>
         </div>
     </section>
 
-    <footer class="bg-teal-600 text-white py-12 text-center mt-10">
+    <footer class="bg-teal-600 text-white py-12 text-center">
         <p class="brand-font text-2xl">Chipi Baby</p>
         <p class="text-[10px] uppercase tracking-widest mt-2 opacity-80">Lanzarote · Islas Canarias</p>
     </footer>
