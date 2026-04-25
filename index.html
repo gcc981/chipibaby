@@ -1,90 +1,63 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chipi Baby</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .btn-wa {
-            background-color: #0d9488;
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
-            display: block;
-            text-align: center;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 14px;
-        }
+        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #333; }
+        .cintillo { background-color: #0d9488; color: white; text-align: center; padding: 10px; font-size: 12px; font-weight: bold; }
+        header { text-align: center; padding: 20px; }
+        .logo { width: 80px; border-radius: 50%; }
+        h1 { color: #0d9488; margin: 10px 0; font-size: 24px; }
+        .seccion-bebe { text-align: center; padding: 20px; }
+        .foto-bebe { width: 100%; max-width: 300px; border-radius: 20px; }
+        .descripcion { padding: 0 20px; text-align: center; font-size: 16px; }
+        .contenedor-productos { display: flex; flex-wrap: wrap; justify-content: center; padding: 10px; }
+        .tarjeta { border: 1px solid #eee; margin: 10px; padding: 15px; width: 40%; border-radius: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .tarjeta img { width: 100%; border-radius: 10px; }
+        .tarjeta h3 { font-size: 14px; margin: 10px 0; text-transform: uppercase; }
+        .precio { color: #0d9488; font-weight: bold; font-size: 18px; margin-bottom: 10px; }
+        .boton { background-color: #0d9488; color: white; padding: 10px; text-decoration: none; border-radius: 5px; display: block; font-size: 12px; font-weight: bold; }
+        .testimonios { padding: 20px; }
+        .testimonio { background-color: #f0fdfa; padding: 15px; border-radius: 10px; margin-bottom: 10px; font-style: italic; font-size: 14px; }
+        footer { text-align: center; padding: 30px; border-top: 1px solid #eee; margin-top: 20px; }
+        footer p { color: #0d9488; font-weight: bold; margin: 0; }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body>
 
-    <div class="bg-[#0d9488] text-white text-center py-2 text-xs font-bold uppercase tracking-wider">
+    <div class="cintillo">
         🏝️ ENVÍO GRATIS A CANARIAS 24-48H | PAGO BIZUM 💸
     </div>
 
-    <header class="text-center py-8">
-        <img src="https://i.postimg.cc/YqHhz7F1/Diseno-sin-titulo-7.jpg" alt="Logo Chipi Baby" class="w-16 mx-auto rounded-full">
-        <h1 class="text-[#0d9488] text-3xl font-black mt-2 tracking-tighter uppercase">Chipi Baby</h1>
+    <header>
+        <img src="https://i.postimg.cc/YqHhz7F1/Diseno-sin-titulo-7.jpg" class="logo" alt="Logo Chipi Baby">
+        <h1>Chipi Baby</h1>
     </header>
 
-    <section class="px-6 mb-8">
-        <div class="max-w-xs mx-auto">
-            <img src="https://i.postimg.cc/k4G6V7YQ/Chat-GPT-Image-12-mar-2026-11-29-52.png" 
-                 alt="Bebé Chipi Baby" 
-                 class="w-full rounded-3xl shadow-lg border-4 border-teal-50 block">
+    <div class="seccion-bebe">
+        <img src="https://i.postimg.cc/k4G6V7YQ/Chat-GPT-Image-12-mar-2026-11-29-52.png" class="foto-bebe" alt="Bebé">
+        <div class="descripcion">
+            <p>Baberos de <b>algodón orgánico</b> e impermeables.</p>
         </div>
-        <div class="text-center mt-6">
-            <p class="text-lg text-gray-700">
-                Baberos de <b>algodón orgánico</b> e impermeables.
-            </p>
-        </div>
-    </section>
+    </div>
 
-    <main class="px-4 grid grid-cols-2 gap-4 max-w-2xl mx-auto">
-        <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-sm text-center">
-            <img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-1080-x-1080-px-1080-x-1080-px.jpg" class="w-full rounded-xl">
-            <h3 class="text-xs font-bold mt-3 uppercase text-gray-500">NOMBRE DEL SET</h3>
-            <p class="text-[#0d9488] font-black text-lg">22,90€</p>
-            <a href="https://wa.me/34722862028" class="btn-wa mt-2 uppercase">Comprar</a>
+    <div class="contenedor-productos">
+        <div class="tarjeta">
+            <img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-1080-x-1080-px-1080-x-1080-px.jpg">
+            <h3>NOMBRE DEL SET</h3>
+            <div class="precio">22,90€</div>
+            <a href="https://wa.me/34722862028" class="boton">COMPRAR</a>
         </div>
-        <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-sm text-center">
-            <img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px.jpg" class="w-full rounded-xl">
-            <h3 class="text-xs font-bold mt-3 uppercase text-gray-500">NOMBRE DEL SET</h3>
-            <p class="text-[#0d9488] font-black text-lg">22,90€</p>
-            <a href="https://wa.me/34722862028" class="btn-wa mt-2 uppercase">Comprar</a>
+        <div class="tarjeta">
+            <img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px.jpg">
+            <h3>NOMBRE DEL SET</h3>
+            <div class="precio">22,90€</div>
+            <a href="https://wa.me/34722862028" class="boton">COMPRAR</a>
         </div>
-        <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-sm text-center">
-            <img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-1080-x-1080-px-1080-x-1080-px.jpg" class="w-full rounded-xl">
-            <h3 class="text-xs font-bold mt-3 uppercase text-gray-500">NOMBRE DEL SET</h3>
-            <p class="text-[#0d9488] font-black text-lg">22,90€</p>
-            <a href="https://wa.me/34722862028" class="btn-wa mt-2 uppercase">Comprar</a>
-        </div>
-        <div class="border border-gray-100 p-3 rounded-2xl bg-white shadow-sm text-center">
-            <img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px.jpg" class="w-full rounded-xl">
-            <h3 class="text-xs font-bold mt-3 uppercase text-gray-500">NOMBRE DEL SET</h3>
-            <p class="text-[#0d9488] font-black text-lg">22,90€</p>
-            <a href="https://wa.me/34722862028" class="btn-wa mt-2 uppercase">Comprar</a>
-        </div>
-    </main>
-
-    <section class="px-6 py-10 max-w-xl mx-auto space-y-4">
-        <div class="bg-teal-50 p-4 rounded-xl italic text-sm text-gray-600">
-            "La capa impermeable es una maravilla, mi bebé siempre está seco."
-            <span class="block font-bold mt-1 not-italic text-[#0d9488]">- Elena M.</span>
-        </div>
-        <div class="bg-teal-50 p-4 rounded-xl italic text-sm text-gray-600">
-            "Diseños preciosos y el envío a Canarias fue súper rápido."
-            <span class="block font-bold mt-1 not-italic text-[#0d9488]">- Sara J.</span>
-        </div>
-    </section>
-
-    <footer class="text-center py-10 border-t border-gray-100">
-        <p class="font-black text-[#0d9488] uppercase tracking-widest text-xl">CHIPI BABY</p>
-        <p class="text-[10px] text-gray-400 mt-2 font-bold uppercase tracking-tighter">Islas Canarias</p>
-    </footer>
-
-</body>
-</html>
+        <div class="tarjeta">
+            <img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-1080-x-1080-px-1080-x-1080-px.jpg">
+            <h3>NOMBRE DEL SET</h3>
+            <div class="precio">22,90€</div>
+            <a href="
