@@ -3,144 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chipi Baby | Baberos Premium Canarias</title>
+    <title>Chipi Baby | Baberos Impermeables</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        body { font-family: 'Quicksand', sans-serif; background-color: #f8ffff; color: #1e293b; }
-        .brand-font { font-family: 'Fredoka One', cursive; color: #0d9488; }
-        
-        .hero-container {
-            max-width: 280px;
-            margin: 2rem auto;
-            background: white;
-            padding: 10px;
-            border-radius: 3rem;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 2rem;
-            padding: 1rem;
-            border: 1px solid #ccfbf1;
-            transition: transform 0.3s ease;
-        }
-        .product-card:hover { transform: translateY(-5px); }
-
-        .btn-chipi {
+        body { font-family: sans-serif; background-color: #ffffff; color: #333; }
+        .btn-wa {
             background-color: #0d9488;
             color: white;
             padding: 12px;
-            border-radius: 1rem;
-            font-weight: bold;
-            text-align: center;
+            border-radius: 10px;
             display: block;
-            border-bottom: 4px solid #086d64;
-            text-transform: uppercase;
-            font-size: 11px;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 10px;
         }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        .wa-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #0d9488;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-            animation: pulse 2s infinite;
-            z-index: 100;
+        .img-bebe {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 5px solid #f0fdfa;
         }
     </style>
 </head>
 <body>
 
-    <div class="bg-teal-600 text-white py-2 text-center text-[10px] font-bold uppercase tracking-widest animate__animated animate__fadeInDown">
-        🏝️ ENVÍO GRATIS A CANARIAS | PAGO BIZUM 💸
+    <div style="background-color: #0d9488; color: white; text-align: center; padding: 10px; font-size: 12px; font-weight: bold;">
+        🏝️ ENVÍO GRATIS A CANARIAS | PAGO POR BIZUM
     </div>
 
-    <nav class="p-4 bg-white border-b flex items-center justify-center gap-3">
-        <img src="https://i.postimg.cc/YqHhz7F1/Diseno-sin-titulo-7.jpg" alt="Logo" class="w-10 h-10 rounded-full">
-        <h1 class="brand-font text-2xl">Chipi Baby</h1>
-    </nav>
-
-    <header class="px-6 py-10 text-center bg-white border-b border-teal-50">
-        <h2 class="brand-font text-4xl mb-4 animate__animated animate__fadeIn">Chipi Baby</h2>
-        
-        <div class="hero-container animate__animated animate__zoomIn">
-            <img src="https://i.postimg.cc/k4G6V7YQ/Chat-GPT-Image-12-mar-2026-11-29-52.png" 
-                 alt="Bebé Chipi Baby" 
-                 class="rounded-[2.5rem] w-full">
-        </div>
-        
-        <p class="text-slate-600 max-w-sm mx-auto text-sm leading-relaxed animate__animated animate__fadeInUp">
-            Baberos de **máxima absorción** para tu bebé. <br>
-            Algodón orgánico y diseños exclusivos de Lanzarote.
-        </p>
+    <header style="text-align: center; padding: 30px 10px;">
+        <img src="https://i.postimg.cc/YqHhz7F1/Diseno-sin-titulo-7.jpg" alt="Logo Chipi Baby" style="width: 60px; border-radius: 50%;">
+        <h1 style="color: #0d9488; font-size: 28px; margin-top: 10px; font-weight: 800;">Chipi Baby</h1>
     </header>
 
-    <section class="py-12 bg-white grid grid-cols-2 md:grid-cols-4 gap-6 px-6 max-w-5xl mx-auto text-center">
-        <div class="animate__animated animate__fadeInUp" style="animation-delay: 0.1s">
-            <div class="text-3xl mb-2">💧</div>
-            <h4 class="font-bold text-teal-700 text-xs uppercase">Doble Capa</h4>
-            <p class="text-[10px] text-slate-500">2 capas de protección total.</p>
-        </div>
-        <div class="animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
-            <div class="text-3xl mb-2">🌿</div>
-            <h4 class="font-bold text-teal-700 text-xs uppercase">Orgánico</h4>
-            <p class="text-[10px] text-slate-500">100% Algodón natural.</p>
-        </div>
-        <div class="animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
-            <div class="text-3xl mb-2">🔄</div>
-            <h4 class="font-bold text-teal-700 text-xs uppercase">Ajustable</h4>
-            <p class="text-[10px] text-slate-500">Crece con tu bebé.</p>
-        </div>
-        <div class="animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
-            <div class="text-3xl mb-2">🏝️</div>
-            <h4 class="font-bold text-teal-700 text-xs uppercase">Canarias</h4>
-            <p class="text-[10px] text-slate-500">Envío gratis 24/48h.</p>
+    <section style="text-align: center; padding: 0 20px;">
+        <img src="https://i.postimg.cc/k4G6V7YQ/Chat-GPT-Image-12-mar-2026-11-29-52.png" alt="Bebé Chipi Baby" class="img-bebe">
+        
+        <div style="margin-top: 20px; max-width: 500px; margin-left: auto; margin-right: auto;">
+            <h2 style="font-size: 20px; font-weight: bold; color: #1f2937;">Baberos que de verdad protegen</h2>
+            <p style="color: #6b7280; font-size: 15px; margin-top: 10px;">
+                Diseñados en Lanzarote con <b>algodón orgánico</b> y una capa interna <b>totalmente impermeable</b> para mantener a tu bebé siempre seco.
+            </p>
         </div>
     </section>
 
-    <main class="max-w-5xl mx-auto p-4 grid grid-cols-2 gap-4 mt-4">
-        <div class="product-card animate__animated animate__fadeInLeft">
-            <img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-1080-x-1080-px-1080-x-1080-px.jpg" class="w-full aspect-square object-cover rounded-2xl">
-            <div class="mt-4 text-center">
-                <h3 class="font-bold text-slate-700 text-xs uppercase">Set LAVA</h3>
-                <p class="text-teal-600 font-black text-xl my-2">22,90€</p>
-                <a href="https://wa.me/34722862028" class="btn-chipi">Comprar</a>
-            </div>
+    <section style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 30px 20px; text-align: center; background-color: #f0fdfa; margin-top: 30px;">
+        <div>
+            <span style="font-size: 24px;">🛡️</span>
+            <h3 style="font-size: 14px; margin: 5px 0; color: #0d9488;">Impermeable</h3>
+            <p style="font-size: 11px;">Doble capa de protección real.</p>
         </div>
-        <div class="product-card animate__animated animate__fadeInRight">
-            <img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px.jpg" class="w-full aspect-square object-cover rounded-2xl">
-            <div class="mt-4 text-center">
-                <h3 class="font-bold text-slate-700 text-xs uppercase">Set MISTRAL</h3>
-                <p class="text-teal-600 font-black text-xl my-2">22,90€</p>
-                <a href="https://wa.me/34722862028" class="btn-chipi">Comprar</a>
-            </div>
+        <div>
+            <span style="font-size: 24px;">🌿</span>
+            <h3 style="font-size: 14px; margin: 5px 0; color: #0d9488;">Orgánico</h3>
+            <p style="font-size: 11px;">100% Algodón, cero irritaciones.</p>
+        </div>
+    </section>
+
+    <main style="padding: 30px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+        <div style="background: white; border: 1px solid #eee; padding: 10px; border-radius: 15px;">
+            <img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-1080-x-1080-px-1080-x-1080-px.jpg" style="width: 100%; border-radius: 10px;">
+            <h3 style="font-size: 13px; margin: 10px 0; text-align: center;">SET LAVA</h3>
+            <p style="color: #0d9488; font-weight: 800; text-align: center;">22,90€</p>
+            <a href="https://wa.me/34722862028" class="btn-wa" style="font-size: 12px;">PEDIR</a>
+        </div>
+
+        <div style="background: white; border: 1px solid #eee; padding: 10px; border-radius: 15px;">
+            <img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px.jpg" style="width: 100%; border-radius: 10px;">
+            <h3 style="font-size: 13px; margin: 10px 0; text-align: center;">SET MISTRAL</h3>
+            <p style="color: #0d9488; font-weight: 800; text-align: center;">22,90€</p>
+            <a href="https://wa.me/34722862028" class="btn-wa" style="font-size: 12px;">PEDIR</a>
         </div>
     </main>
 
-    <footer class="bg-teal-600 text-white py-12 text-center mt-12">
-        <h4 class="brand-font text-white text-2xl">Chipi Baby</h4>
-        <p class="text-[10px] uppercase tracking-widest mt-2 opacity-80">Lanzarote · Canarias</p>
+    <footer style="background-color: #0d9488; color: white; text-align: center; padding: 40px 20px; margin-top: 20px;">
+        <p style="font-weight: bold; margin: 0;">Chipi Baby - Lanzarote</p>
+        <p style="font-size: 10px; opacity: 0.8; margin-top: 5px;">Hechos con amor en Canarias</p>
     </footer>
-
-    <a href="https://wa.me/34722862028" class="wa-float">
-        <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.109.004.258-.041.404.308.159.386.542 1.32.588 1.416.046.096.077.208.014.332-.063.125-.094.203-.188.313-.093.11-.197.247-.28.332-.093.093-.191.194-.082.381.109.187.485.8.1 .1 1.039 1.418 1.107 1.147.234.12.417.106.521-.014.104-.121.448-.521.569-.699.121-.178.241-.149.405-.089.164.06.1.034 1.039.526.939.491 1.1.581 1.158.684.058.103.058.596-.086.991z"/></svg>
-    </a>
 
 </body>
 </html>
