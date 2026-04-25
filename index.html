@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chipi Baby | Especialistas en Dentición y Protección</title>
     
-    <meta name="description" content="Baberos de algodón orgánico diseñados en Canarias para bebés que babean mucho. Máxima absorción y estilo para la etapa de dentición. Envío gratis 24/48h.">
-    <meta name="keywords" content="baberos canarias, chipi baby, denticion bebe, algodon orgánico, bebes canarias">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chipibaby.com/">
-    <meta property="og:title" content="Chipi Baby | Especialistas en Dentición y Protección">
-    <meta property="og:description" content="Los baberos más absorbentes de Canarias. Diseñados para mantener a tu bebé seco y cómodo.">
-    <meta property="og:image" content="https://i.postimg.cc/YqHhz7F1/Diseno-sin-titulo-(7).jpg">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
@@ -29,7 +20,9 @@
             animation: gradientBG 15s ease infinite;
         }
         @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        .product-card { transition: all 0.4s ease; background: white; border-radius: 2.5rem; padding: 1.5rem; border: 1px solid #f1f5f9; }
+        .img-container { width: 100%; aspect-ratio: 1 / 1; border-radius: 1.5rem; overflow: hidden; background-color: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); margin-bottom: 1.5rem; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .product-card { transition: all 0.4s ease; background: white; border-radius: 2.5rem; padding: 1.5rem; border: 1px solid #f1f5f9; display: flex; flex-direction: column; }
         .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.1); }
         .typing-text::after { content: '|'; animation: blink 1s infinite; }
         @keyframes blink { 50% { opacity: 0; } }
@@ -38,7 +31,7 @@
 <body class="text-slate-800">
 
     <div class="bg-teal-600 text-white py-2 text-[11px] md:text-sm font-bold text-center shadow-sm tracking-wide px-4">
-        ✨ Envío GRATIS 24h-48h a toda Canarias | Pedidos por BIZUM ✨
+        ✨ Envío GRATIS a toda Canarias | Pedidos por WhatsApp | PAGO SEGURO POR BIZUM 💸
     </div>
 
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-teal-50 px-4 md:px-12 py-3 flex justify-between items-center">
@@ -56,98 +49,144 @@
     <header class="hero-animated px-6 py-12 lg:py-24 border-b border-teal-50/50">
         <div class="max-w-7xl mx-auto text-center lg:text-left grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
-                <h1 class="text-4xl md:text-7xl brand-font text-slate-900 mb-6 leading-[1.1]">Chipi Baby</h1>
-                <p class="text-xl md:text-2xl text-teal-600 font-bold mb-4">Desde Canarias para tus bebés</p>
-                <p class="text-base md:text-xl text-slate-600 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                    Diseñados en Canarias para bebés que babean mucho. El equilibrio perfecto entre estilo y máxima absorción.
+                <h1 class="text-5xl md:text-7xl brand-font text-slate-900 mb-6 leading-[1.1]">Chipi Baby</h1>
+                <p class="text-xl md:text-2xl text-teal-600 font-bold mb-4 uppercase tracking-wider">Desde Canarias para tus bebés</p>
+                <p class="text-base md:text-xl text-slate-600 mb-6 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                    Especialistas en baberos de máxima absorción. Haz tu pedido hoy y <b>paga cómodamente con Bizum</b>.
                 </p>
-                <div class="h-12 text-2xl font-bold text-slate-800">
+                <div class="h-12 text-2xl font-bold text-slate-800 mb-8">
                     <span id="typing" class="typing-text"></span>
+                </div>
+                <div class="bg-teal-50 border-l-4 border-teal-600 p-4 inline-block rounded-r-xl shadow-sm">
+                    <p class="text-teal-800 font-bold text-sm md:text-base">📲 Pedido rápido vía WhatsApp + Bizum</p>
                 </div>
             </div>
             <div data-aos="zoom-in">
-                <div class="max-w-[320px] md:max-w-md mx-auto">
-                    <img src="https://i.postimg.cc/1371W08X/Chat_GPT_Image_12_mar_2026_11_29_52.png" alt="Bebé" class="rounded-[3rem] shadow-2xl border-[12px] border-white">
-                </div>
+                <img src="https://i.postimg.cc/1371W08X/Chat_GPT_Image_12_mar_2026_11_29_52.png" alt="Bebé" class="rounded-[3rem] shadow-2xl border-[12px] border-white max-w-sm mx-auto">
             </div>
         </div>
     </header>
 
-    <section id="coleccion" class="py-20 px-4 max-w-6xl mx-auto">
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl brand-font mb-16 text-slate-900">La solución definitiva para la baba</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div data-aos="fade-up">
+                    <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3">
+                        <i class="fas fa-droplet text-2xl text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Triple Capa</h3>
+                    <p class="text-slate-500 text-sm">Máxima absorción que bloquea la humedad por horas.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-3">
+                        <i class="fas fa-heart text-2xl text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Algodón Orgánico</h3>
+                    <p class="text-slate-500 text-sm">Extra suave e hipoalergénico para la piel del bebé.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-6">
+                        <i class="fas fa-mobile-screen text-2xl text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pago por Bizum</h3>
+                    <p class="text-slate-500 text-sm">Rápido, seguro y sin complicaciones desde tu móvil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coleccion" class="py-20 px-4 max-w-6xl mx-auto bg-slate-50 rounded-[3rem] my-10">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl brand-font mb-4 text-slate-900">🌈 Nuestra Colección</h2>
-            <p class="text-slate-500 text-lg">Sets premium de 4 baberos de alta absorción</p>
+            <h2 class="text-4xl brand-font mb-4 text-slate-900">🌈 Nuestros Sets</h2>
+            <p class="text-slate-500 text-lg">Sets premium de 4 baberos | Envío incluido</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div class="product-card" data-aos="fade-up">
-                <img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-(1080-x-1080-px)-(1080-x-1080-px).jpg" class="w-full aspect-square object-cover rounded-3xl mb-6 shadow-sm">
+                <div class="img-container"><img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-(1080-x-1080-px)-(1080-x-1080-px).jpg"></div>
                 <div class="flex justify-between items-center px-2">
                     <h3 class="text-3xl font-bold text-slate-800">Set LAVA</h3>
                     <span class="text-3xl font-black text-teal-600">22,90€</span>
                 </div>
-                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20el%20Set%20LAVA" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-colors">Comprar ahora 📱</a>
+                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20el%20Set%20LAVA%20y%20pagar%20por%20Bizum" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-all">PEDIR POR BIZUM 📱</a>
             </div>
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px).jpg" class="w-full aspect-square object-cover rounded-3xl mb-6 shadow-sm">
+                <div class="img-container"><img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px).jpg"></div>
                 <div class="flex justify-between items-center px-2">
                     <h3 class="text-3xl font-bold text-slate-800">Set MISTRAL</h3>
                     <span class="text-3xl font-black text-teal-600">22,90€</span>
                 </div>
-                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20el%20Set%20MISTRAL" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-colors">Comprar ahora 📱</a>
+                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20el%20Set%20MISTRAL%20y%20pagar%20por%20Bizum" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-all">PEDIR POR BIZUM 📱</a>
             </div>
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://i.postimg.cc/QthyqHjf/Sin_título_(1080_x_1080_px)_(1080_x_1080_px)_(1080_x_1080_px)_(1080_x_1080_px)_(1080_x_1080_px).png" class="w-full aspect-square object-cover rounded-3xl mb-6 shadow-sm">
+                <div class="img-container"><img src="https://i.postimg.cc/QthyqHjf/Sin_título_(1080_x_1080_px)_(1080_x_1080_px)_(1080_x_1080_px)_(1080_x_1080_px)_(1080_x_1080_px).png"></div>
                 <div class="flex justify-between items-center px-2">
                     <h3 class="text-3xl font-bold text-slate-800">Set RISCO</h3>
                     <span class="text-3xl font-black text-teal-600">22,90€</span>
                 </div>
-                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20el%20Set%20RISCO" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-colors">Comprar ahora 📱</a>
+                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20el%20Set%20RISCO%20y%20pagar%20por%20Bizum" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-all">PEDIR POR BIZUM 📱</a>
             </div>
 
             <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="https://i.postimg.cc/XNDCfm8G/Sin-titulo-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(108.png" class="w-full aspect-square object-cover rounded-3xl mb-6 shadow-sm">
+                <div class="img-container"><img src="https://i.postimg.cc/XNDCfm8G/Sin-titulo-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(108.png"></div>
                 <div class="flex justify-between items-center px-2">
                     <h3 class="text-3xl font-bold text-slate-800">Set GORO</h3>
                     <span class="text-3xl font-black text-teal-600">22,90€</span>
                 </div>
-                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20el%20Set%20GORO" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-colors">Comprar ahora 📱</a>
+                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20el%20Set%20GORO%20y%20pagar%20por%20Bizum" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-all">PEDIR POR BIZUM 📱</a>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-teal-50/50 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-teal-50" data-aos="fade-up">
-                <p class="italic text-slate-600 mb-4">"¡Una salvación! Mi bebé tiene la piel atópica y el algodón orgánico es increíblemente suave."</p>
-                <p class="font-bold text-teal-600">Elena M. - Tenerife</p>
-            </div>
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-teal-50" data-aos="fade-up" data-aos-delay="100">
-                <p class="italic text-slate-600 mb-4">"Me encanta que los broches se ajusten según crece. El diseño es perfecto."</p>
-                <p class="font-bold text-teal-600">Sara R. - Gran Canaria</p>
-            </div>
-            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-teal-50" data-aos="fade-up" data-aos-delay="200">
-                <p class="italic text-slate-600 mb-4">"Absorben muchísimo más que cualquier otro babero. Colores preciosos."</p>
-                <p class="font-bold text-teal-600">Lara G. - Fuerteventura</p>
+    <section class="py-24 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl brand-font text-center mb-16">Opiniones de Familias Reales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-teal-50/50 p-8 rounded-[2rem] border border-teal-100" data-aos="fade-up">
+                    <p class="italic text-slate-600 mb-4">"El algodón orgánico es increíblemente suave. ¡Mi bebé ya no tiene el pecho mojado!"</p>
+                    <p class="font-bold text-teal-600">Elena M. - Tenerife</p>
+                </div>
+                <div class="bg-teal-50/50 p-8 rounded-[2rem] border border-teal-100" data-aos="fade-up" data-aos-delay="100">
+                    <p class="italic text-slate-600 mb-4">"Se ajustan perfecto y los diseños combinan con todo. El pago por Bizum es comodísimo."</p>
+                    <p class="font-bold text-teal-600">Sara R. - Gran Canaria</p>
+                </div>
+                <div class="bg-teal-50/50 p-8 rounded-[2rem] border border-teal-100" data-aos="fade-up" data-aos-delay="200">
+                    <p class="italic text-slate-600 mb-4">"Envío súper rápido a Lanzarote. La presentación del paquete es preciosa."</p>
+                    <p class="font-bold text-teal-600">Lara G. - Arrecife</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <footer class="bg-teal-600 text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
+            <div>
+                <h4 class="brand-font text-3xl mb-4">Chipi Baby</h4>
+                <p class="text-teal-100">Desde Canarias para tus bebés. Calidad, amor y máxima protección en cada babero.</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end justify-center">
+                <p class="font-bold mb-2">Aceptamos Bizum 📲</p>
+                <p class="text-teal-100 text-sm">© 2026 Chipi Baby | Arrecife, Lanzarote</p>
+            </div>
+        </div>
+    </footer>
 
     <div class="fixed bottom-8 right-8 z-50">
-        <a href="https://wa.me/34722862028" target="_blank" class="bg-teal-600 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center ring-4 ring-white hover:scale-110 transition-transform">
+        <a href="https://wa.me/34722862028" class="bg-teal-600 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center ring-4 ring-white hover:scale-110 transition-transform">
             <i class="fab fa-whatsapp text-3xl"></i>
         </a>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
-        const words = ["Frena la Baba ☁️", "Mantiene Seco ✨", "Protege su Piel 🌿"];
+        AOS.init({ duration: 1000, once: true });
+        const words = [\"Mantiene Seco ✨\", \"Protege su Piel 🌿\", \"Pago por Bizum 💸\", \"Envío Gratis 🚚\"];
         let i = 0, j = 0, isDeleting = false;
         function type() {
-            const typingElement = document.getElementById("typing");
+            const typingElement = document.getElementById(\"typing\");
             const currentWord = words[i];
             if (isDeleting) {
                 typingElement.textContent = currentWord.substring(0, j - 1);
