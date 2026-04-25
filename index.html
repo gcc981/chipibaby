@@ -3,138 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chipi Baby | Especialistas en Dentición y Protección</title>
-    
+    <title>Chipi Baby | Especialistas en Dentición</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #0d9488; }
-        body { font-family: 'Quicksand', sans-serif; background-color: #f8ffff; overflow-x: hidden; }
+        body { font-family: 'Quicksand', sans-serif; background-color: #f8ffff; }
         .brand-font { font-family: 'Fredoka One', cursive; }
-        .hero-animated {
-            background: linear-gradient(-45deg, #f0fdfa, #fff7ed, #f0f9ff, #ffffff);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-        }
-        @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        .img-container { width: 100%; aspect-ratio: 1 / 1; border-radius: 1.5rem; overflow: hidden; background-color: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); margin-bottom: 1.5rem; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-        .product-card { transition: all 0.4s ease; background: white; border-radius: 2.5rem; padding: 1.5rem; border: 1px solid #f1f5f9; display: flex; flex-direction: column; }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.1); }
-        .typing-text::after { content: '|'; animation: blink 1s infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
+        .img-container { width: 100%; aspect-ratio: 1/1; border-radius: 1.5rem; overflow: hidden; background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
-<body class="text-slate-800">
+<body>
 
-    <div class="bg-teal-600 text-white py-2 text-[11px] md:text-sm font-bold text-center shadow-sm tracking-wide px-4">
-        ✨ Envío GRATIS a toda Canarias | Pedidos por WhatsApp | PAGO SEGURO POR BIZUM 💸
+    <div class="bg-teal-600 text-white py-2 text-xs md:text-sm font-bold text-center px-4">
+        ✨ Envío GRATIS a Canarias | Pedidos por WhatsApp | PAGO POR BIZUM 💸
     </div>
 
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-teal-50 px-4 md:px-12 py-3 flex justify-between items-center">
+    <nav class="bg-white border-b p-4 flex items-center justify-between">
         <div class="flex items-center gap-3">
-            <div class="h-12 w-12 overflow-hidden rounded-full border-2 border-teal-500/20 bg-white">
-                <img src="https://i.postimg.cc/YqHhz7F1/Diseno-sin-titulo-(7).jpg" alt="Logo Chipi Baby" class="w-full h-full object-cover">
-            </div>
-            <div class="flex flex-col">
-                <span class="text-lg md:text-2xl brand-font text-teal-600 leading-none">Chipi Baby</span>
-                <span class="text-[9px] font-bold text-slate-400 tracking-[0.25em] uppercase mt-1">Islas Canarias</span>
-            </div>
+            <img src="https://i.postimg.cc/YqHhz7F1/Diseno-sin-titulo-7.jpg" class="w-10 h-10 rounded-full border">
+            <span class="brand-font text-teal-600 text-xl">Chipi Baby</span>
         </div>
     </nav>
 
-    <header class="hero-animated px-6 py-12 lg:py-24 border-b border-teal-50/50">
-        <div class="max-w-7xl mx-auto text-center lg:text-left grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right">
-                <h1 class="text-5xl md:text-7xl brand-font text-slate-900 mb-6 leading-[1.1]">Chipi Baby</h1>
-                <p class="text-xl md:text-2xl text-teal-600 font-bold mb-4">Desde Canarias para tus bebés</p>
-                <p class="text-base md:text-xl text-slate-600 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                    Especialistas en baberos de máxima absorción para la etapa de dentición. 
-                    <b>Haz tu pedido hoy por WhatsApp y paga cómodamente con Bizum.</b>
-                </p>
-                <div class="h-12 text-2xl font-bold text-slate-800">
-                    <span id="typing" class="typing-text"></span>
-                </div>
-            </div>
-            <div data-aos="zoom-in" class="relative">
-                <img src="https://i.postimg.cc/1371W08X/Chat_GPT_Image_12_mar_2026_11_29_52.png" alt="Bebé Chipi Baby" class="rounded-[3rem] shadow-2xl border-[12px] border-white max-w-sm mx-auto">
-            </div>
-        </div>
+    <header class="p-8 text-center bg-white border-b">
+        <h1 class="text-4xl brand-font text-slate-900 mb-2">Chipi Baby</h1>
+        <p class="text-teal-600 font-bold mb-4">Desde Canarias para tus bebés</p>
+        <img src="https://i.postimg.cc/k4G6V7YQ/Chat-GPT-Image-12-mar-2026-11-29-52.png" class="w-64 h-64 mx-auto rounded-[2rem] shadow-xl border-8 border-white mb-6">
     </header>
 
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl brand-font mb-16 text-slate-900">¿Por qué elegir Chipi Baby?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div data-aos="fade-up">
-                    <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3">
-                        <i class="fas fa-droplet text-2xl text-teal-600"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">Máxima Absorción</h3>
-                    <p class="text-slate-500 text-xs italic">Triple capa que bloquea la humedad por horas.</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-3">
-                        <i class="fas fa-leaf text-2xl text-teal-600"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">Algodón Orgánico</h3>
-                    <p class="text-slate-500 text-xs italic">Extra suave e hipoalergénico para su piel.</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-6">
-                        <i class="fas fa-expand-alt text-2xl text-teal-600"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">Ajuste Doble</h3>
-                    <p class="text-slate-500 text-xs italic">Botones de presión que crecen con tu bebé.</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-mobile-screen text-2xl text-teal-600"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">Pago con Bizum</h3>
-                    <p class="text-slate-500 text-xs italic">Rápido y 100% seguro desde tu móvil.</p>
-                </div>
-            </div>
+    <section class="p-8 grid grid-cols-2 md:grid-cols-4 gap-4 bg-white">
+        <div class="text-center">
+            <i class="fas fa-droplet text-teal-600 text-xl mb-2"></i>
+            <p class="text-xs font-bold">Máxima Absorción</p>
+        </div>
+        <div class="text-center">
+            <i class="fas fa-leaf text-teal-600 text-xl mb-2"></i>
+            <p class="text-xs font-bold">Algodón Orgánico</p>
+        </div>
+        <div class="text-center">
+            <i class="fas fa-expand-alt text-teal-600 text-xl mb-2"></i>
+            <p class="text-xs font-bold">Ajuste Doble</p>
+        </div>
+        <div class="text-center">
+            <i class="fas fa-mobile-screen text-teal-600 text-xl mb-2"></i>
+            <p class="text-xs font-bold">Pago Bizum</p>
         </div>
     </section>
 
-    <section id="coleccion" class="py-20 px-4 max-w-6xl mx-auto">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl brand-font mb-4 text-slate-900">🌈 Nuestra Colección</h2>
-            <p class="text-slate-500 text-lg">Sets premium de 4 baberos | Envío Gratis</p>
+    <section class="p-6 max-w-4xl mx-auto space-y-12">
+        <div class="bg-white p-4 rounded-[2rem] border shadow-sm">
+            <div class="img-container"><img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-1080-x-1080-px-1080-x-1080-px.jpg"></div>
+            <div class="flex justify-between items-center mt-4">
+                <h3 class="text-2xl font-bold">Set LAVA</h3>
+                <span class="text-2xl font-black text-teal-600">22,90€</span>
+            </div>
+            <a href="https://wa.me/34722862028?text=Quiero%20el%20Set%20LAVA" class="mt-4 block w-full bg-teal-600 text-white text-center py-4 rounded-xl font-bold">PEDIR POR BIZUM 📱</a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div class="product-card" data-aos="fade-up">
-                <div class="img-container"><img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-(1080-x-1080-px)-(1080-x-1080-px).jpg" alt="Set Lava"></div>
-                <div class="flex justify-between items-center px-2">
-                    <h3 class="text-3xl font-bold text-slate-800 tracking-tight">Set LAVA</h3>
-                    <span class="text-3xl font-black text-teal-600">22,90€</span>
-                </div>
-                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20pedir%20el%20Set%20LAVA%20y%20pagar%20por%20Bizum" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-all">PEDIR POR BIZUM 📱</a>
+        <div class="bg-white p-4 rounded-[2rem] border shadow-sm">
+            <div class="img-container"><img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px.jpg"></div>
+            <div class="flex justify-between items-center mt-4">
+                <h3 class="text-2xl font-bold">Set MISTRAL</h3>
+                <span class="text-2xl font-black text-teal-600">22,90€</span>
             </div>
+            <a href="https://wa.me/34722862028?text=Quiero%20el%20Set%20MISTRAL" class="mt-4 block w-full bg-teal-600 text-white text-center py-4 rounded-xl font-bold">PEDIR POR BIZUM 📱</a>
+        </div>
 
-            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="img-container"><img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px).jpg" alt="Set Mistral"></div>
-                <div class="flex justify-between items-center px-2">
-                    <h3 class="text-3xl font-bold text-slate-800 tracking-tight">Set MISTRAL</h3>
-                    <span class="text-3xl font-black text-teal-600">22,90€</span>
-                </div>
-                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20pedir%20el%20Set%20MISTRAL%20y%20pagar%20por%20Bizum" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-all">PEDIR POR BIZUM 📱</a>
+        <div class="bg-white p-4 rounded-[2rem] border shadow-sm">
+            <div class="img-container"><img src="https://i.postimg.cc/QthyqHjf/Sin-titulo-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px.png"></div>
+            <div class="flex justify-between items-center mt-4">
+                <h3 class="text-2xl font-bold">Set RISCO</h3>
+                <span class="text-2xl font-black text-teal-600">22,90€</span>
             </div>
+            <a href="https://wa.me/34722862028?text=Quiero%20el%20Set%20RISCO" class="mt-4 block w-full bg-teal-600 text-white text-center py-4 rounded-xl font-bold">PEDIR POR BIZUM 📱</a>
+        </div>
 
-            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="img-container"><img src="https://i.postimg.cc/QthyqHjf/Sin_título_(1080_x_1080_px)_(1080_x_1080_px)_(1080_x_1080_px)_(1080_x_1080_px)_(1080_x_1080_px).png" alt="Set Risco"></div>
-                <div class="flex justify-between items-center px-2">
-                    <h3 class="text-3xl font-bold text-slate-800 tracking-tight">Set RISCO</h3>
-                    <span class="text-3xl font-black text-teal-600">22,90€</span>
-                </div>
-                <a href="https://wa.me/34722862028?text=Hola!%20Quiero%20pedir%20el%20Set%20RISCO%20y%20pagar%20por%20Bizum" class="mt-6 w-full block bg-teal-600 text-white py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-teal-700 transition-all">PEDIR POR BIZUM 📱</a>
+        <div class="bg-white p-4 rounded-[2rem] border shadow-sm">
+            <div class="img-container"><img src="https://i.postimg.cc/XNDCfm8G/Sin-titulo-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-108.png"></div>
+            <div class="flex justify-between items-center mt-4">
+                <h3 class="text-2xl font-bold">Set GORO</h3>
+                <span class="text-2xl font-black text-teal-600">22,90€</span>
             </div>
+            <a href="https://wa.me/34722862028?text=Quiero%20el%20Set%20GORO" class="mt-4 block w-full bg-teal-600 text-white text-center py-4 rounded-xl font-bold">PEDIR POR BIZUM 📱</a>
+        </div>
+    </section>
 
-            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="img-container"><img src="https://i.postimg.cc/XNDCfm8G/Sin-titulo-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(1080-x-1080-px)-(108.png" alt="Set Goro"></div>
-                <div class="
+    <footer class="bg-teal-600 text-white p-12 text-center">
+        <p class="brand-font text-2xl mb-2">Chipi Baby</p>
+        <p class="text-xs uppercase tracking-widest opacity-80 mb-4">Desde Canarias para tus bebés</p>
+        <p class="text-sm font-bold">Pedidos por WhatsApp y Bizum 📲💸</p>
+        <p class="text-[10px] mt-8 opacity-50">© 2026 Lanzarote, Islas Canarias</p>
+    </footer>
+
+    <a href="https://wa.me/34722862028" class="fixed bottom-6 right-6 bg-teal-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+</body>
+</html>
