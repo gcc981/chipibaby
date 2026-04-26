@@ -3,44 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chipi Baby</title>
+    <title>Chipi Baby | Baberos Impermeables</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
-        body { font-family: sans-serif; margin: 0; text-align: center; background: white; }
-        .cintillo { background: #0d9488; color: white; padding: 10px; font-weight: bold; font-size: 12px; }
-        header { padding: 20px; }
-        h1 { color: #0d9488; font-size: 24px; }
-        .foto-bebe { width: 90%; max-width: 300px; border-radius: 20px; margin: 10px auto; display: block; }
-        .productos { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 10px; }
-        .tarjeta { border: 1px solid #eee; width: 40%; padding: 10px; border-radius: 15px; }
-        .tarjeta img { width: 100%; border-radius: 10px; }
-        .precio { color: #0d9488; font-weight: bold; margin: 5px 0; }
-        .boton { background: #0d9488; color: white; padding: 8px; text-decoration: none; border-radius: 5px; display: block; font-size: 11px; }
-        footer { padding: 20px; color: #0d9488; font-weight: bold; border-top: 1px solid #eee; margin-top: 20px; }
+        body { font-family: sans-serif; background-color: #ffffff; color: #333; }
+
+        .btn-wa {
+            background-color: #0d9488;
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .img-bebe {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 5px solid #f0fdfa;
+        }
     </style>
 </head>
+
 <body>
-    <div class="cintillo">🏝️ ENVÍO GRATIS A CANARIAS 24-48H</div>
-    <header>
-        <h1>CHIPI BABY</h1>
-    </header>
 
-    <img src="https://i.postimg.cc/k4G6V7YQ/Chat-GPT-Image-12-mar-2026-11-29-52.png" class="foto-bebe">
+<div style="background-color:#0d9488;color:white;text-align:center;padding:10px;font-size:12px;font-weight:bold;">
+🏝️ ENVÍO GRATIS A CANARIAS | PAGO POR BIZUM
+</div>
 
-    <p>Baberos de algodón orgánico e impermeables.</p>
+<header style="text-align:center;padding:30px 10px;">
+    <h1 style="color:#0d9488;font-size:28px;font-weight:800;">Chipi Baby</h1>
+    <p style="font-size:12px;color:#666;">Baberos impermeables hechos en Canarias</p>
+</header>
 
-    <div class="productos">
-        <div class="tarjeta">
-            <img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo-1080-x-1080-px-1080-x-1080-px.jpg">
-            <div class="precio">22,90€</div>
-            <a href="https://wa.me/34722862028" class="boton">COMPRAR</a>
-        </div>
-        <div class="tarjeta">
-            <img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px-1080-x-1080-px.jpg">
-            <div class="precio">22,90€</div>
-            <a href="https://wa.me/34722862028" class="boton">COMPRAR</a>
-        </div>
+<section style="text-align:center;padding:0 20px;">
+    <img src="https://i.postimg.cc/k4G6V7YQ/Chat-GPT-Image-12-mar-2026-11-29-52.png" class="img-bebe">
+
+    <h2 style="margin-top:20px;">Baberos que de verdad protegen</h2>
+    <p style="color:#666;max-width:500px;margin:auto;">
+        Diseñados con algodón suave e impermeable para mantener a tu bebé seco y cómodo todo el día.
+    </p>
+</section>
+
+<section style="display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:30px 20px;background:#f0fdfa;text-align:center;">
+    <div>
+        <h3>🛡️ Impermeable</h3>
+        <p>Protección total contra líquidos</p>
+    </div>
+    <div>
+        <h3>🌿 Suave</h3>
+        <p>Algodón cómodo para piel sensible</p>
+    </div>
+</section>
+
+<main style="padding:30px 20px;display:grid;grid-template-columns:1fr 1fr;gap:15px;">
+
+    <div style="border:1px solid #eee;padding:10px;border-radius:15px;">
+        <img src="https://i.postimg.cc/hPTVKMLM/Sin-titulo.jpg" style="width:100%;border-radius:10px;">
+        <h3 style="text-align:center;">SET LAVA</h3>
+        <p style="text-align:center;color:#0d9488;font-weight:bold;">22,90€</p>
+        <a class="btn-wa" href="https://wa.me/34722862028">PEDIR</a>
     </div>
 
-    <footer>CHIPI BABY</footer>
+    <div style="border:1px solid #eee;padding:10px;border-radius:15px;">
+        <img src="https://i.postimg.cc/rp0VLZ43/Sin-titulo.jpg" style="width:100%;border-radius:10px;">
+        <h3 style="text-align:center;">SET MISTRAL</h3>
+        <p style="text-align:center;color:#0d9488;font-weight:bold;">22,90€</p>
+        <a class="btn-wa" href="https://wa.me/34722862028">PEDIR</a>
+    </div>
+
+</main>
+
+<footer style="background:#0d9488;color:white;text-align:center;padding:30px;">
+    <p>Chipi Baby - Lanzarote</p>
+    <small>Hecho con amor en Canarias 💚</small>
+</footer>
+
 </body>
 </html>
